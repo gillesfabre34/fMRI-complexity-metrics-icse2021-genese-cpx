@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">20.1</span>
+                <span class="strong">14.8</span>
             </div>
         </div>
         <div class="clearfix">
@@ -200,7 +200,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">15.6</th>
+                        <th class="bgwarning">10.3</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgcorrect">4</th>
                     </tr>
@@ -211,23 +211,29 @@
                                 <pre>
                             <code class="language-js">
                                 
-                public static String compute(int[] numbers) { // ------------ +2.6 Complexity index (+0.6 atomic, +2 typing)
-                    double[] result &#x3D; new double[numbers.length]; // --------- +0.6 Complexity index (+0.6 atomic)
+                public static String compute(int[] numbers) { // --------------- +2.6 Complexity index (+0.6 atomic, +2 typing)
+                    double[] result &#x3D; new double[numbers.length]; // ------------ +0.6 Complexity index (+0.6 atomic)
             
-                    for (int i &#x3D; 0; i &lt; numbers.length; i++) { // ------------ +1.9 Complexity index (+0.9 atomic, +1 structural)
-                        if (numbers[i] &#x3D;&#x3D; 0) { // ---------------------------- +2.0 Complexity index (+0.5 atomic, +1 structural, +0.5 nesting)
-                            result[i] &#x3D; 0; // -------------------------------- +0.4 Complexity index (+0.4 atomic)
-                            continue;
-                        }
+                    for (int i &#x3D; 0; i &lt; numbers.length; i++) { // --------------- +1.9 Complexity index (+0.9 atomic, +1 structural)
+                        if (numbers[i] &#x3D;&#x3D; 0) { } // ----------------------------- +1.0 Complexity index (+0.5 atomic, +0.5 nesting)
             
-                        if (numbers[i] &lt; 0) { // ----------------------------- +2.0 Complexity index (+0.5 atomic, +1 structural, +0.5 nesting)
-                            result[i] &#x3D; Math.sqrt(-1 * numbers[i]); // ------- +1.9 Complexity index (+0.9 atomic, +1 structural)
-                        } else { // ------------------------------------------ +1.1 Complexity index (+0.1 atomic, +1 structural)
-                            result[i] &#x3D; Math.sqrt(numbers[i]); // ------------ +1.7 Complexity index (+0.7 atomic, +1 structural)
+                        if (numbers[i] &lt; 0) { } // ------------------------------ +1.0 Complexity index (+0.5 atomic, +0.5 nesting)
+                        else { // ----------------------------------------------- +0.1 Complexity index (+0.1 atomic)
+                            result[i] &#x3D; Math.sqrt(numbers[i]); // --------------- +1.7 Complexity index (+0.7 atomic, +1 structural)
                         }
+            //             if (numbers[i] &#x3D;&#x3D; 0) {
+            //                 result[i] &#x3D; 0;
+            //                 continue;
+            //             }
+            //
+            //             if (numbers[i] &lt; 0) {
+            //                 result[i] &#x3D; Math.sqrt(-1 * numbers[i]);
+            //             } else {
+            //                 result[i] &#x3D; Math.sqrt(numbers[i]);
+            //             }
                     }
             
-                    return Arrays.toString(result); // ----------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+                    return Arrays.toString(result); // -------------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
                 }
             
                             </code>
@@ -313,12 +319,6 @@
                     '8',
                     '9',
                     '10',
-                    '11',
-                    '12',
-                    '13',
-                    '14',
-                    '15',
-                    '16',
             ],
             datasets: [{
                 data: [
@@ -328,12 +328,6 @@
                         0,
                         0,
                         1,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
                         0,
                         0,
                         0,
@@ -352,12 +346,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
                 ],
             }]
         },

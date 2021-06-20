@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">15.6</span>
+                <span class="strong">13.6</span>
             </div>
         </div>
         <div class="clearfix">
@@ -67,18 +67,18 @@
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">100 %</span>
                             <span class="quiet"> Correct</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>2/2</span>
                         </div>
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">0 %</span>
                             <span class="quiet"> Warning</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>0/2</span>
                             <span class="quiet">(threshold : 10)</span>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">11</th>
+                        <th class="bgcorrect">9</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgcorrect">3</th>
                     </tr>
@@ -218,9 +218,9 @@
                     int result &#x3D; 0; // ------------------------------ +0.4 Complexity index (+0.4 atomic)
                     for (int i &#x3D; count - 1; i &gt;&#x3D; 0; i--) { // ------- +2.0 Complexity index (+1.0 atomic, +1 structural)
                         int current &#x3D; count - i; // ----------------- +0.6 Complexity index (+0.6 atomic)
-                        if (numbers[i] &gt;&#x3D; current) { // ------------- +2.0 Complexity index (+0.5 atomic, +1 structural, +0.5 nesting)
+                        if (numbers[i] &gt;&#x3D; current) { // ------------- +1.0 Complexity index (+0.5 atomic, +0.5 nesting)
                             result &#x3D; current; // -------------------- +0.3 Complexity index (+0.3 atomic)
-                        } else { // --------------------------------- +1.1 Complexity index (+0.1 atomic, +1 structural)
+                        } else { // --------------------------------- +0.1 Complexity index (+0.1 atomic)
                             break;
                         }
                     }
@@ -256,8 +256,8 @@
         data: {
             datasets: [{
                 data: [
-                    1,
-                    1,
+                    2,
+                    0,
                     0,
                 ],
                 backgroundColor: [
@@ -310,8 +310,6 @@
                     '7',
                     '8',
                     '9',
-                    '10',
-                    '11',
             ],
             datasets: [{
                 data: [
@@ -321,8 +319,6 @@
                         0,
                         0,
                         1,
-                        0,
-                        0,
                         0,
                         0,
                         0,
@@ -339,8 +335,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#99ccff',
-                        '#ffa31a',
                 ],
             }]
         },

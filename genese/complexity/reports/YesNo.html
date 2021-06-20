@@ -32,13 +32,13 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">18.7</span>
+                <span class="strong">12.7</span>
             </div>
         </div>
         <div class="clearfix">
             <div class='fl pad1y space-right2'>
                 <span>Cyclomatic complexity :</span>
-                <span class="strong">6</span>
+                <span class="strong">5</span>
             </div>
         </div>
     </div>
@@ -67,18 +67,18 @@
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">100 %</span>
                             <span class="quiet"> Correct</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>2/2</span>
                         </div>
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">0 %</span>
                             <span class="quiet"> Warning</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>0/2</span>
                             <span class="quiet">(threshold : 10)</span>
                         </div>
                     </div>
@@ -200,9 +200,9 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">14.5</th>
+                        <th class="bgcorrect">8.5</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
-                        <th class="bgcorrect">5</th>
+                        <th class="bgcorrect">4</th>
                     </tr>
                     </thead>
                     <tbody class="method-body">
@@ -211,22 +211,32 @@
                                 <pre>
                             <code class="language-js">
                                 
-                static Boolean compute(String input) { // ------------ +2.6 Complexity index (+0.6 atomic, +2 typing)
-                    input &#x3D; input.toLowerCase(); // ------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+                static Boolean compute(String input) { // --------------- +2.6 Complexity index (+0.6 atomic, +2 typing)
+                    input &#x3D; input.toLowerCase(); // ---------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
             
-                    if (input.contentEquals(&quot;n&quot;)) { // ---------------- +2.4 Complexity index (+0.4 atomic, +2 structural)
-                        return false; // ------------------------------ +0.2 Complexity index (+0.2 atomic)
-                    } else if (input.contentEquals(&quot;no&quot;)) { // -------- +2.4 Complexity index (+0.4 atomic, +2 structural)
-                        return false; // ------------------------------ +0.2 Complexity index (+0.2 atomic)
+                    if (input.contentEquals(&quot;n&quot;)) { // ------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+            //             return false;
+                    } else if (input.contentEquals(&quot;no&quot;)) { // ----------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+            //             return false;
                     }
             
-                    if (input.contentEquals(&quot;y&quot;)) { // ---------------- +2.4 Complexity index (+0.4 atomic, +2 structural)
-                        return true; // ------------------------------- +0.2 Complexity index (+0.2 atomic)
-                    } else if (input.contentEquals(&quot;yes&quot;)) { // ------- +2.4 Complexity index (+0.4 atomic, +2 structural)
-                        return true; // ------------------------------- +0.2 Complexity index (+0.2 atomic)
+                    if (input.contentEquals(&quot;y&quot;)) { // ------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+                        return true; // ---------------------------------- +0.2 Complexity index (+0.2 atomic)
                     }
             
-                    return null; // ----------------------------------- +0.1 Complexity index (+0.1 atomic)
+            //         if (input.contentEquals(&quot;n&quot;)) {
+            //             return false;
+            //         } else if (input.contentEquals(&quot;no&quot;)) {
+            //             return false;
+            //         }
+            //
+            //         if (input.contentEquals(&quot;y&quot;)) {
+            //             return true;
+            //         } else if (input.contentEquals(&quot;yes&quot;)) {
+            //             return true;
+            //         }
+            
+                    return null; // -------------------------------------- +0.1 Complexity index (+0.1 atomic)
                 }
             
                             </code>
@@ -257,8 +267,8 @@
         data: {
             datasets: [{
                 data: [
-                    1,
-                    1,
+                    2,
+                    0,
                     0,
                 ],
                 backgroundColor: [
@@ -311,12 +321,6 @@
                     '7',
                     '8',
                     '9',
-                    '10',
-                    '11',
-                    '12',
-                    '13',
-                    '14',
-                    '15',
             ],
             datasets: [{
                 data: [
@@ -325,12 +329,6 @@
                         0,
                         0,
                         1,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
                         0,
                         0,
                         0,
@@ -348,12 +346,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#99ccff',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
                 ],
             }]
         },
@@ -442,18 +434,15 @@
                     2,
                     3,
                     4,
-                    5,
             ],
             datasets: [{
                 data: [
                         1,
                         0,
                         0,
-                        0,
                         1,
                 ],
                 backgroundColor: [
-                        '#99ccff',
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
