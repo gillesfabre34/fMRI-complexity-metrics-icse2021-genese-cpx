@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">26</span>
+                <span class="strong">19</span>
             </div>
         </div>
         <div class="clearfix">
@@ -203,7 +203,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">20.3</th>
+                        <th class="bgwarning">13.3</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgwarning">6</th>
                     </tr>
@@ -215,11 +215,13 @@
                             <code class="language-js">
                                 
                 public static List&lt;Integer&gt; compute(int a, int b, int c, int d) { // ------ +6.6 Complexity index (+1.6 atomic, +5 typing)
-                    if (a &gt; b) { int temp &#x3D; b; b &#x3D; a; a &#x3D; temp; } // ----------------------- +2.4 Complexity index (+1.4 atomic, +1 structural)
-                    if (c &gt; d) { int temp &#x3D; d; d &#x3D; c; c &#x3D; temp; } // ----------------------- +2.4 Complexity index (+1.4 atomic, +1 structural)
-                    if (a &gt; c) { int temp &#x3D; c; c &#x3D; a; a &#x3D; temp; } // ----------------------- +2.4 Complexity index (+1.4 atomic, +1 structural)
-                    if (b &gt; d) { int temp &#x3D; d; d &#x3D; b; b &#x3D; temp; } // ----------------------- +2.4 Complexity index (+1.4 atomic, +1 structural)
-                    if (b &gt; c) { int temp &#x3D; c; c &#x3D; b; b &#x3D; temp; } // ----------------------- +2.4 Complexity index (+1.4 atomic, +1 structural)
+                    if (a &gt; b) {  } // ----------------------------------------------------- +0.4 Complexity index (+0.4 atomic)
+            //         if (a &gt; b) { int temp &#x3D; b; b &#x3D; a; a &#x3D; temp; }
+                    if (c &gt; d) {  } // ----------------------------------------------------- +0.4 Complexity index (+0.4 atomic)
+            //         if (c &gt; d) { int temp &#x3D; d; d &#x3D; c; c &#x3D; temp; }
+                    if (a &gt; c) { int temp &#x3D; c; c &#x3D; a; a &#x3D; temp; } // ----------------------- +1.4 Complexity index (+1.4 atomic)
+                    if (b &gt; d) { int temp &#x3D; d; d &#x3D; b; b &#x3D; temp; } // ----------------------- +1.4 Complexity index (+1.4 atomic)
+                    if (b &gt; c) { int temp &#x3D; c; c &#x3D; b; b &#x3D; temp; } // ----------------------- +1.4 Complexity index (+1.4 atomic)
             
                     return Arrays.asList(a, b, c, d); // ----------------------------------- +1.7 Complexity index (+0.7 atomic, +1 structural)
                 }
@@ -310,13 +312,6 @@
                     '11',
                     '12',
                     '13',
-                    '14',
-                    '15',
-                    '16',
-                    '17',
-                    '18',
-                    '19',
-                    '20',
             ],
             datasets: [{
                 data: [
@@ -327,13 +322,6 @@
                         0,
                         0,
                         1,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
                         0,
                         0,
                         0,
@@ -354,13 +342,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
                         '#ffa31a',
                         '#ffa31a',
                         '#ffa31a',

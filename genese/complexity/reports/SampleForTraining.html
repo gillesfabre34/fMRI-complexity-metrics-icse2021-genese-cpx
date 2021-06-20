@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">9.6</span>
+                <span class="strong">7.6</span>
             </div>
         </div>
         <div class="clearfix">
@@ -200,7 +200,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgcorrect">5.4</th>
+                        <th class="bgcorrect">3.4</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgcorrect">2</th>
                     </tr>
@@ -212,9 +212,9 @@
                             <code class="language-js">
                                 
                 public static boolean compute(int number) { // ------ +2.5 Complexity index (+0.5 atomic, +2 typing)
-                    if (number &lt; 5) { // ----------------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+                    if (number &lt; 5) { // ----------------------------- +0.4 Complexity index (+0.4 atomic)
                         return false; // ----------------------------- +0.2 Complexity index (+0.2 atomic)
-                    } else { // -------------------------------------- +1.1 Complexity index (+0.1 atomic, +1 structural)
+                    } else { // -------------------------------------- +0.1 Complexity index (+0.1 atomic)
                         return true; // ------------------------------ +0.2 Complexity index (+0.2 atomic)
                     }
                 }
@@ -296,11 +296,9 @@
                     '2',
                     '3',
                     '4',
-                    '5',
             ],
             datasets: [{
                 data: [
-                        0,
                         0,
                         0,
                         0,
@@ -308,7 +306,6 @@
                         1,
                 ],
                 backgroundColor: [
-                        '#99ccff',
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',

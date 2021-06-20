@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">16.5</span>
+                <span class="strong">15.5</span>
             </div>
         </div>
         <div class="clearfix">
@@ -200,7 +200,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">12.3</th>
+                        <th class="bgwarning">11.3</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgcorrect">3</th>
                     </tr>
@@ -215,7 +215,7 @@
                     boolean result &#x3D; true; // ---------------------------------------------------------- +0.3 Complexity index (+0.3 atomic)
             
                     for (int i &#x3D; 0, j &#x3D; word.length() - 1; i &lt; word.length() / 2; i++, j--) { // ------- +4.7 Complexity index (+1.7 atomic, +3 structural)
-                        if (word.charAt(i) !&#x3D; word.charAt(j)) { // ------------------------------------- +4.3 Complexity index (+0.8 atomic, +3 structural, +0.5 nesting)
+                        if (word.charAt(i) !&#x3D; word.charAt(j)) { // ------------------------------------- +3.3 Complexity index (+0.8 atomic, +2 structural, +0.5 nesting)
                             result &#x3D; false; // --------------------------------------------------------- +0.3 Complexity index (+0.3 atomic)
                             break;
                         }
@@ -308,7 +308,6 @@
                     '9',
                     '10',
                     '11',
-                    '12',
             ],
             datasets: [{
                 data: [
@@ -317,7 +316,6 @@
                         0,
                         0,
                         1,
-                        0,
                         0,
                         0,
                         0,
@@ -338,7 +336,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#ffa31a',
                         '#ffa31a',
                 ],
             }]

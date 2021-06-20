@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">22.5</span>
+                <span class="strong">19.5</span>
             </div>
         </div>
         <div class="clearfix">
@@ -200,7 +200,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">18.3</th>
+                        <th class="bgwarning">15.3</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgwarning">7</th>
                     </tr>
@@ -217,11 +217,11 @@
                     boolean flag &#x3D; false; // --------------------------------------------- +0.3 Complexity index (+0.3 atomic)
                     for (int i &#x3D; text.length() - 1; i &gt;&#x3D; 0; i--) { // -------------------- +3.1 Complexity index (+1.1 atomic, +2 structural)
                         char c &#x3D; text.charAt(i); // -------------------------------------- +1.6 Complexity index (+0.6 atomic, +1 structural)
-                        if ((c &gt;&#x3D; &#x27;a&#x27; &amp;&amp; c &lt;&#x3D; &#x27;z&#x27;) || (c &gt;&#x3D; &#x27;A&#x27; &amp;&amp; c &lt;&#x3D; &#x27;Z&#x27;)) { // ------- +6.4 Complexity index (+1.9 atomic, +4 structural, +0.5 nesting)
+                        if ((c &gt;&#x3D; &#x27;a&#x27; &amp;&amp; c &lt;&#x3D; &#x27;z&#x27;) || (c &gt;&#x3D; &#x27;A&#x27; &amp;&amp; c &lt;&#x3D; &#x27;Z&#x27;)) { // ------- +5.4 Complexity index (+1.9 atomic, +3 structural, +0.5 nesting)
                             flag &#x3D; true; // ---------------------------------------------- +0.3 Complexity index (+0.3 atomic)
                             result++; // ------------------------------------------------- +0.1 Complexity index (+0.1 atomic)
-                        } else { // ------------------------------------------------------ +1.1 Complexity index (+0.1 atomic, +1 structural)
-                            if (flag) // ------------------------------------------------- +2.2 Complexity index (+0.2 atomic, +1 structural, +1 nesting)
+                        } else { // ------------------------------------------------------ +0.1 Complexity index (+0.1 atomic)
+                            if (flag) // ------------------------------------------------- +1.2 Complexity index (+0.2 atomic, +1 nesting)
                                 break;
                         }
                     }
@@ -317,9 +317,6 @@
                     '13',
                     '14',
                     '15',
-                    '16',
-                    '17',
-                    '18',
             ],
             datasets: [{
                 data: [
@@ -328,9 +325,6 @@
                         0,
                         0,
                         1,
-                        0,
-                        0,
-                        0,
                         0,
                         0,
                         0,
@@ -355,9 +349,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#ffa31a',
-                        '#ffa31a',
-                        '#ffa31a',
                         '#ffa31a',
                         '#ffa31a',
                         '#ffa31a',

@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">16.4</span>
+                <span class="strong">13.5</span>
             </div>
         </div>
         <div class="clearfix">
@@ -67,18 +67,18 @@
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">100 %</span>
                             <span class="quiet"> Correct</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>2/2</span>
                         </div>
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">0 %</span>
                             <span class="quiet"> Warning</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>0/2</span>
                             <span class="quiet">(threshold : 10)</span>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">11.7</th>
+                        <th class="bgcorrect">8.8</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgcorrect">4</th>
                     </tr>
@@ -216,13 +216,14 @@
                     int temp &#x3D; number1; // ------------------------------------- +0.4 Complexity index (+0.4 atomic)
             
                     while (temp !&#x3D; 0) { // ------------------------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
-                        if (number1 &lt; number2) { // ---------------------------- +1.9 Complexity index (+0.4 atomic, +1 structural, +0.5 nesting)
-                            temp &#x3D; number1; // --------------------------------- +0.3 Complexity index (+0.3 atomic)
-                            number1 &#x3D; number2; // ------------------------------ +0.3 Complexity index (+0.3 atomic)
-                            number2 &#x3D; temp; // --------------------------------- +0.3 Complexity index (+0.3 atomic)
-                        }
+                        if (number1 &lt; number2) { } // -------------------------- +0.9 Complexity index (+0.4 atomic, +0.5 nesting)
+            //             if (number1 &lt; number2) {
+            //                 temp &#x3D; number1;
+            //                 number1 &#x3D; number2;
+            //                 number2 &#x3D; temp;
+            //             }
                         temp &#x3D; number1 % number2; // --------------------------- +0.5 Complexity index (+0.5 atomic)
-                        if (temp !&#x3D; 0) { // ------------------------------------ +1.9 Complexity index (+0.4 atomic, +1 structural, +0.5 nesting)
+                        if (temp !&#x3D; 0) { // ------------------------------------ +0.9 Complexity index (+0.4 atomic, +0.5 nesting)
                             number1 &#x3D; number2; // ------------------------------ +0.3 Complexity index (+0.3 atomic)
                             number2 &#x3D; temp; // --------------------------------- +0.3 Complexity index (+0.3 atomic)
                         }
@@ -259,8 +260,8 @@
         data: {
             datasets: [{
                 data: [
-                    1,
-                    1,
+                    2,
+                    0,
                     0,
                 ],
                 backgroundColor: [
@@ -313,9 +314,6 @@
                     '7',
                     '8',
                     '9',
-                    '10',
-                    '11',
-                    '12',
             ],
             datasets: [{
                 data: [
@@ -325,9 +323,6 @@
                         0,
                         0,
                         1,
-                        0,
-                        0,
-                        0,
                         0,
                         0,
                         0,
@@ -344,9 +339,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#99ccff',
-                        '#ffa31a',
-                        '#ffa31a',
                 ],
             }]
         },

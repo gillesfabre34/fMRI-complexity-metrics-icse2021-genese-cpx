@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">13.8</span>
+                <span class="strong">11.8</span>
             </div>
         </div>
         <div class="clearfix">
@@ -201,7 +201,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgcorrect">9.1</th>
+                        <th class="bgcorrect">7.1</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgcorrect">3</th>
                     </tr>
@@ -213,11 +213,11 @@
                             <code class="language-js">
                                 
                 static int compute(int a, int b) { // ----------- +3.9 Complexity index (+0.9 atomic, +3 typing)
-                    if (b &#x3D;&#x3D; 0) { // ----------------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+                    if (b &#x3D;&#x3D; 0) { // ----------------------------- +0.4 Complexity index (+0.4 atomic)
                         return 1; // ----------------------------- +0.2 Complexity index (+0.2 atomic)
                     }
             
-                    if (b &#x3D;&#x3D; 1) { // ----------------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+                    if (b &#x3D;&#x3D; 1) { // ----------------------------- +0.4 Complexity index (+0.4 atomic)
                         return a; // ----------------------------- +0.2 Complexity index (+0.2 atomic)
                     }
             
@@ -304,8 +304,6 @@
                     '5',
                     '6',
                     '7',
-                    '8',
-                    '9',
             ],
             datasets: [{
                 data: [
@@ -316,13 +314,9 @@
                         0,
                         1,
                         0,
-                        0,
-                        0,
                         1,
                 ],
                 backgroundColor: [
-                        '#99ccff',
-                        '#99ccff',
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',

@@ -32,7 +32,7 @@
         <div class="clearfix padly">
             <div class='fl pad1y space-right2'>
                 <span>Complexity index : </span>
-                <span class="strong">16.6</span>
+                <span class="strong">14.6</span>
             </div>
         </div>
         <div class="clearfix">
@@ -67,18 +67,18 @@
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">100 %</span>
                             <span class="quiet"> Correct</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>2/2</span>
                         </div>
                     </div>
                     <div class="clearfix">
                         <div class='fl pad1y space-right2'>
-                            <span class="strong">50 %</span>
+                            <span class="strong">0 %</span>
                             <span class="quiet"> Warning</span>
                             <span
-                                    class='fraction'>1/2</span>
+                                    class='fraction'>0/2</span>
                             <span class="quiet">(threshold : 10)</span>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                             <span class="strong">compute</span>
                         </th>
                         <th class="right bgwhite">Complexity Index</th>
-                        <th class="bgwarning">11.9</th>
+                        <th class="bgcorrect">9.9</th>
                         <th class="right bgwhite">Cyclomatic complexity</th>
                         <th class="bgcorrect">3</th>
                     </tr>
@@ -213,11 +213,11 @@
                             <code class="language-js">
                                 
                 static int compute(String s, int number) { // ------ +3.9 Complexity index (+0.9 atomic, +3 typing)
-                    if (number &lt; 0) { // ---------------------------- +1.4 Complexity index (+0.4 atomic, +1 structural)
+                    if (number &lt; 0) { // ---------------------------- +0.4 Complexity index (+0.4 atomic)
                         return 0; // -------------------------------- +0.2 Complexity index (+0.2 atomic)
                     }
             
-                    if (s.charAt(number) &#x3D;&#x3D; &#x27;0&#x27;){ // ---------------- +2.6 Complexity index (+0.6 atomic, +2 structural)
+                    if (s.charAt(number) &#x3D;&#x3D; &#x27;0&#x27;){ // ---------------- +1.6 Complexity index (+0.6 atomic, +1 structural)
                         return 2 * compute(s, number - 1); // ------- +1.8 Complexity index (+0.8 atomic, +1 structural)
                     }
             
@@ -252,8 +252,8 @@
         data: {
             datasets: [{
                 data: [
-                    1,
-                    1,
+                    2,
+                    0,
                     0,
                 ],
                 backgroundColor: [
@@ -307,8 +307,6 @@
                     '8',
                     '9',
                     '10',
-                    '11',
-                    '12',
             ],
             datasets: [{
                 data: [
@@ -318,8 +316,6 @@
                         0,
                         0,
                         1,
-                        0,
-                        0,
                         0,
                         0,
                         0,
@@ -338,8 +334,6 @@
                         '#99ccff',
                         '#99ccff',
                         '#99ccff',
-                        '#ffa31a',
-                        '#ffa31a',
                 ],
             }]
         },
