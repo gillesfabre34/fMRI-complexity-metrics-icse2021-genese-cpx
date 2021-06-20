@@ -279,12 +279,14 @@ def main():
 
     # correlate with complexity metrics
     snippet_subj_complexity_metrics = snippet_subj_complexity_behavioral_orig[
-        ['participant', 'snippet', 'subj_complexity', 'LOC', 'McCabe', 'Halstead', 'DepDegree']]
+        ['participant', 'snippet', 'subj_complexity', 'LOC', 'McCabe', 'Halstead', 'DepDegree', 'CognitiveComplexity', 'GeneseCpx']]
     snippet_subj_complexity_metrics.dropna(inplace=True)
     plot_correlation_subjcomplexity_metrics(snippet_subj_complexity_metrics, 'LOC')
     plot_correlation_subjcomplexity_metrics(snippet_subj_complexity_metrics, 'McCabe')
     plot_correlation_subjcomplexity_metrics(snippet_subj_complexity_metrics, 'Halstead')
     plot_correlation_subjcomplexity_metrics(snippet_subj_complexity_metrics, 'DepDegree')
+    plot_correlation_subjcomplexity_metrics(snippet_subj_complexity_metrics, 'CognitiveComplexity')
+    plot_correlation_subjcomplexity_metrics(snippet_subj_complexity_metrics, 'GeneseCpx')
 
     print('\n##### \n-> all done \o/')
 
